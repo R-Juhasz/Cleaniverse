@@ -1,6 +1,6 @@
 <template>
   <div
-    class="w-screen h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center justify-between overflow-hidden"
+    class="w-screen min-h-screen bg-cover bg-center bg-no-repeat flex flex-col items-center justify-between overflow-hidden"
     :style="{ backgroundImage: `url('https://via.placeholder.com/1920x1080?text=Cleans+Background')` }"
   >
     <!-- Header -->
@@ -15,13 +15,13 @@
       <h2 class="text-xl sm:text-2xl md:text-3xl font-bold mb-6 text-gray-800">
         Our Services
       </h2>
-      <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full max-w-5xl">
+      <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full max-w-5xl px-4">
         <!-- Home Cleaning Section -->
         <div
           class="bg-white p-4 sm:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow cursor-pointer flex flex-col items-center justify-center"
         >
           <div
-            class="w-full h-32 sm:h-40 bg-cover bg-center mb-4 rounded-lg"
+            class="w-full h-40 bg-cover bg-center mb-4 rounded-lg"
             style="background-image: url('https://via.placeholder.com/300x200?text=Home+Cleaning')"
           ></div>
           <h3 class="text-lg sm:text-xl font-semibold mb-2">Home Cleaning</h3>
@@ -41,7 +41,7 @@
           class="bg-white p-4 sm:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow cursor-pointer flex flex-col items-center justify-center"
         >
           <div
-            class="w-full h-32 sm:h-40 bg-cover bg-center mb-4 rounded-lg"
+            class="w-full h-40 bg-cover bg-center mb-4 rounded-lg"
             style="background-image: url('https://via.placeholder.com/300x200?text=Office+Cleaning')"
           ></div>
           <h3 class="text-lg sm:text-xl font-semibold mb-2">Commercial Cleaning</h3>
@@ -61,7 +61,7 @@
           class="bg-white p-4 sm:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow cursor-pointer flex flex-col items-center justify-center"
         >
           <div
-            class="w-full h-32 sm:h-40 bg-cover bg-center mb-4 rounded-lg"
+            class="w-full h-40 bg-cover bg-center mb-4 rounded-lg"
             style="background-image: url('https://via.placeholder.com/300x200?text=Custom+Cleaning')"
           ></div>
           <h3 class="text-lg sm:text-xl font-semibold mb-2">Custom Cleaning</h3>
@@ -84,7 +84,7 @@
       class="fixed inset-0 bg-black bg-opacity-50 flex justify-center items-center z-50 px-4"
       @click.self="closeDialog"
     >
-      <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg w-11/12 max-w-md">
+      <div class="bg-white p-6 sm:p-8 rounded-2xl shadow-lg w-full max-w-md">
         <h2 class="text-lg sm:text-2xl font-bold text-gray-800 mb-4 text-center">
           {{ currentDialogTitle }}
         </h2>
@@ -102,7 +102,6 @@
     </div>
   </div>
 </template>
-
 
 <script>
 export default {
@@ -148,15 +147,13 @@ export default {
 </script>
 
 <style scoped>
-/* Prevent scrolling */
+/* Prevent horizontal overflow */
 html,
 body {
   overflow-x: hidden;
-  overflow-y: hidden;
 }
-.bg-white {
-  border-radius: 1rem;
-}
+
+/* Improve box shadows for better appearance */
 .shadow-lg {
   box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.1);
 }
