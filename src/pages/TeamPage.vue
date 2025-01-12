@@ -36,10 +36,10 @@
           class="w-40 h-40 rounded-full mb-4 object-cover"
         />
         <h3 class="text-xl font-bold text-gray-800 mb-2">Keeley Munden</h3>
-        <p class="text-gray-600 mb-4">Office Cleaner</p>
+        <p class="text-gray-600 mb-4">Lead Cleaner</p>
         <ul class="text-gray-600 text-sm space-y-2">
           <li><strong>Experience:</strong> 5 years</li>
-          <li><strong>Specialty:</strong> Office Cleaning</li>
+          <li><strong>Specialty:</strong> Deep Cleaning</li>
           <li><strong>Fun Fact:</strong> Enjoys painting landscapes.</li>
         </ul>
       </div>
