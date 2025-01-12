@@ -53,9 +53,10 @@
           <div>
             <button
               type="submit"
+              :disabled="isSubmitting"
               class="bg-[#10b981] text-white font-semibold py-3 px-6 rounded-md shadow hover:bg-[#0f9773] transition-colors w-full"
             >
-              Submit
+              {{ isSubmitting ? "Submitting..." : "Submit" }}
             </button>
           </div>
         </div>
@@ -73,19 +74,43 @@ export default {
         email: "",
         message: "",
       },
+      isSubmitting: false,
     };
   },
   methods: {
     submitForm() {
-      // You can handle the form submission here.
-      console.log("Form Submitted", this.formData);
-      alert("Thank you for reaching out! We'll get back to you shortly.");
-      this.formData = { name: "", email: "", message: "" }; // Reset form
+      this.isSubmitting = true;
+      fetch("https://example.com/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(this.formData),
+      })
+        .then((response) => {
+          if (!response.ok) {
+            throw new Error("Failed to submit the form");
+          }
+          return response.json();
+        })
+        .then(() => {
+          alert("Thank you for reaching out! We'll get back to you shortly.");
+          this.formData = { name: "", email: "", message: "" };
+        })
+        .catch((error) => {
+          console.error("Error:", error);
+          alert("Something went wrong. Please try again later.");
+        })
+        .finally(() => {
+          this.isSubmitting = false;
+        });
     },
   },
 };
 </script>
 
 <style scoped>
-/* Add custom styles if needed */
+/* Hover effect for form */
+.bg-white:hover {
+  transform: scale(1.02);
+  transition: transform 0.2s ease-in-out;
+}
 </style>
