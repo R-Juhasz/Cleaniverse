@@ -13,13 +13,21 @@
         </router-link>
 
         <!-- Desktop Links -->
-        <ul class="hidden md:flex gap-8 text-sm font-medium">
+        <ul class="hidden md:flex gap-8 text-sm font-medium items-center">
           <li><router-link to="/" class="hover:text-blue-500">Home</router-link></li>
           <li><router-link to="/cleans" class="hover:text-blue-500">Services</router-link></li>
           <li><router-link to="/payment" class="hover:text-blue-500">Payment</router-link></li>
           <li><router-link to="/team" class="hover:text-blue-500">The Team</router-link></li>
           <li><router-link to="/contact-us" class="hover:text-blue-500">Contact Us</router-link></li>
         </ul>
+
+        <!-- Book Now Button for Desktop -->
+        <router-link
+          to="/book-online"
+          class="hidden md:block bg-[#10b981] text-white font-semibold py-2 px-5 rounded-lg text-sm hover:bg-[#0f9773] shadow hover:shadow-md transition-transform transform hover:-translate-y-0.5"
+        >
+          Book Now
+        </router-link>
 
         <!-- Hamburger Menu (Mobile) -->
         <div class="md:hidden">
@@ -42,6 +50,16 @@
           <li><router-link to="/payment" class="hover:text-blue-500" @click="toggleMenu">Payment</router-link></li>
           <li><router-link to="/team" class="hover:text-blue-500" @click="toggleMenu">The Team</router-link></li>
           <li><router-link to="/contact-us" class="hover:text-blue-500" @click="toggleMenu">Contact Us</router-link></li>
+          <!-- Book Now Button for Mobile -->
+          <li>
+            <router-link
+              to="/book-online"
+              class="bg-[#10b981] text-white font-semibold py-2 px-4 rounded-lg text-sm hover:bg-[#0f9773] shadow hover:shadow-md transition-transform transform hover:-translate-y-0.5"
+              @click="toggleMenu"
+            >
+              Book Now
+            </router-link>
+          </li>
         </ul>
       </div>
     </header>
@@ -85,10 +103,13 @@ header {
 }
 
 /* Add smooth transitions for the mobile menu */
-.menu-enter-active, .menu-leave-active {
+.menu-enter-active,
+.menu-leave-active {
   transition: opacity 0.3s ease;
 }
-.menu-enter, .menu-leave-to {
+.menu-enter,
+.menu-leave-to {
   opacity: 0;
 }
 </style>
+
