@@ -14,7 +14,7 @@
         <li>Disinfection of frequently touched areas</li>
       </ul>
       <p class="text-lg text-gray-700 mb-6">
-        Price: <span class="font-bold">$120</span>
+        Price: <span class="font-bold">£17PH</span>
       </p>
       <router-link
         to="/book-online"

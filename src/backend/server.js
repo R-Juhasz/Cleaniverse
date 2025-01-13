@@ -1,46 +1,37 @@
 require('dotenv').config(); // Load environment variables from .env file
 const express = require('express');
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); // Stripe secret key
-const cors = require('cors'); // To handle requests from frontend
+const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY); // Stripe secret key from .env
+const cors = require('cors'); // Middleware for handling CORS
 
 const app = express();
 
 // Middleware
-app.use(express.json());
-app.use(cors());
+app.use(express.json()); // Parse incoming JSON requests
+app.use(cors()); // Allow requests from frontend
 
-// Create a checkout session
+// Endpoint to create a checkout session
 app.post('/create-checkout-session', async (req, res) => {
+  const { lineItems, successUrl, cancelUrl } = req.body; // Destructure data from frontend
   try {
+    // Create a Stripe checkout session
     const session = await stripe.checkout.sessions.create({
-      payment_method_types: ['card'], // Payment methods allowed
-      line_items: [
-        {
-          price_data: {
-            currency: 'usd',
-            product_data: {
-              name: 'Cleaning Service',
-              description: 'Professional cleaning for your home or office.',
-            },
-            unit_amount: 5000, // Price in cents ($50.00)
-          },
-          quantity: 1,
-        },
-      ],
-      mode: 'payment',
-      success_url: `${req.headers.origin}/payment-success`,
-      cancel_url: `${req.headers.origin}/payment-cancel`,
+      payment_method_types: ['card'], // Allowed payment methods
+      line_items: lineItems, // Pass dynamic line items
+      mode: 'payment', // Payment mode
+      success_url: successUrl || `${req.headers.origin}/payment-success`, // Redirect on success
+      cancel_url: cancelUrl || `${req.headers.origin}/payment-cancel`, // Redirect on cancel
     });
 
-    res.json({ id: session.id });
+    // Send the session ID back to the client
+    res.status(200).json({ id: session.id });
   } catch (error) {
-    console.error(error);
-    res.status(500).json({ error: 'Something went wrong.' });
+    console.error('Error creating checkout session:', error.message);
+    res.status(500).json({ error: 'Failed to create checkout session' });
   }
 });
 
 // Start the server
-const PORT = 4242;
+const PORT = process.env.PORT || 4242; // Use PORT from .env or default to 4242
 app.listen(PORT, () => {
   console.log(`Server running on http://localhost:${PORT}`);
 });

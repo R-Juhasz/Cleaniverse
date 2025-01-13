@@ -9,7 +9,11 @@
   },
   "dependencies": {
     "@stripe/stripe-js": "^5.5.0",
+    "body-parser": "^1.20.3",
     "core-js": "^3.8.3",
+    "cors": "^2.8.5",
+    "express": "^4.21.2",
+    "nodemailer": "^6.9.16",
     "stripe": "^17.5.0",
     "vue": "^3.2.13",
     "vue-router": "^4.0.13"
@@ -45,5 +49,18 @@
     "last 2 versions",
     "not dead",
     "not ie 11"
-  ]
+  ],
+  "description": "Welcome to **Cleaniverse**, a responsive, single-scroll cleaning services website designed to deliver a modern, clean user experience. Built with Vue.js 3, this project showcases a professional layout with sections for services, payment, team members, and more.",
+  "main": "babel.config.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/R-Juhasz/Cleaniverse.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/R-Juhasz/Cleaniverse/issues"
+  },
+  "homepage": "https://github.com/R-Juhasz/Cleaniverse#readme"
 }

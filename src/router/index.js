@@ -7,11 +7,11 @@ import PaymentPage from '../pages/PaymentPage.vue';
 import TeamPage from '../pages/TeamPage.vue';
 
 import GeneralHouseCleaningPage from '../pages/GeneralHouseCleaningPage.vue';
-import SpringCleaningPage from '../pages/SpringCleaningPage.vue';
 import MoveInOutCleaningPage from '../pages/MoveInOutCleaningPage.vue';
 import DeepCleaningPage from '../pages/DeepCleaningPage.vue';
 import PostRenovationCleaningPage from '../pages/PostRenovationCleaningPage.vue';
 import EcoFriendlyCleaningPage from '../pages/EcoFriendlyCleaningPage.vue';
+import OvenCleaningPage from '../pages/OvenCleaningPage.vue'; // Added Oven Cleaning page
 import CustomCleanPage from '../pages/CustomCleanPage.vue';
 
 import ContactUsPage from '../pages/ContactUsPage.vue';
@@ -37,11 +37,11 @@ const routes = [
 
   // Routes for Home Cleaning types
   { path: '/general-house-cleaning', name: 'GeneralHouseCleaning', component: GeneralHouseCleaningPage },
-  { path: '/spring-cleaning', name: 'SpringCleaning', component: SpringCleaningPage },
   { path: '/move-in-out-cleaning', name: 'MoveInOutCleaning', component: MoveInOutCleaningPage },
   { path: '/deep-cleaning', name: 'DeepCleaning', component: DeepCleaningPage },
   { path: '/post-renovation-cleaning', name: 'PostRenovationCleaning', component: PostRenovationCleaningPage },
   { path: '/eco-friendly-cleaning', name: 'EcoFriendlyCleaning', component: EcoFriendlyCleaningPage },
+  { path: '/oven-cleaning', name: 'OvenCleaning', component: OvenCleaningPage }, // Added Oven Cleaning route
   { path: '/custom-clean', name: 'CustomClean', component: CustomCleanPage },
 
   // Routes for Office Cleaning types
@@ -59,5 +59,6 @@ const router = createRouter({
 });
 
 export default router;
+
 
 

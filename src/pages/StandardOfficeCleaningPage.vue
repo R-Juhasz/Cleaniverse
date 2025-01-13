@@ -14,7 +14,7 @@
         <li>Basic restroom cleaning</li>
       </ul>
       <p class="text-lg text-gray-700 mb-6">
-        Price: <span class="font-bold">$70</span>
+        Price: <span class="font-bold">£15PH</span>
       </p>
       <router-link
         to="/book-online"

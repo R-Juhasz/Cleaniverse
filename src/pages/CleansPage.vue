@@ -91,11 +91,12 @@ export default {
       currentCleans: [],
       homeCleans: [
         { name: 'General House Cleaning', route: '/general-house-cleaning' },
-        { name: 'Spring Cleaning', route: '/spring-cleaning' },
-        { name: 'Move-In/Move-Out Cleaning', route: '/move-in-out-cleaning' },
         { name: 'Deep Cleaning', route: '/deep-cleaning' },
-        { name: 'Post-Renovation Cleaning', route: '/post-renovation-cleaning' },
         { name: 'Eco-Friendly Cleaning', route: '/eco-friendly-cleaning' },
+        { name: 'Move-In/Move-Out Cleaning', route: '/move-in-out-cleaning' },
+        { name: 'Post-Renovation Cleaning', route: '/post-renovation-cleaning' },
+        { name: 'Oven Cleaning', route: '/Oven-cleaning' },
+
       ],
       officeCleans: [
         { name: 'Standard Office Cleaning', route: '/standard-office-cleaning' },
@@ -106,7 +107,6 @@ export default {
         { name: 'After-Hours Office Cleaning', route: '/after-hours-office-cleaning' },
       ],
       customCleans: [
-        { name: 'Specialized Cleaning', route: '/custom-clean' },
         { name: 'Tailored Services', route: '/custom-clean' },
       ],
     };
