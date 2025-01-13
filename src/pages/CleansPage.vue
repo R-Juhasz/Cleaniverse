@@ -18,16 +18,9 @@
       <div class="grid gap-6 grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 w-full max-w-5xl px-4">
         <!-- Home Cleaning Section -->
         <div
-          class="bg-white p-4 sm:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow cursor-pointer flex flex-col items-center justify-center"
+          class="bg-white p-4 sm:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow cursor-pointer"
         >
-          <div
-            class="w-full h-40 bg-cover bg-center mb-4 rounded-lg"
-            style="background-image: url('https://via.placeholder.com/300x200?text=Home+Cleaning')"
-          ></div>
-          <h3 class="text-lg sm:text-xl font-semibold mb-2">Home Cleaning</h3>
-          <p class="text-sm sm:text-base text-gray-600 text-center">
-            Thorough and regular home cleaning to keep your space spotless.
-          </p>
+          <h3 class="text-lg sm:text-xl font-bold mb-4 text-gray-800">Home Cleaning</h3>
           <button
             class="mt-4 bg-blue-500 text-white px-4 sm:px-6 py-2 rounded-lg shadow hover:bg-blue-600 transition"
             @click="openDialog('homeCleans')"
@@ -38,16 +31,9 @@
 
         <!-- Office Cleaning Section -->
         <div
-          class="bg-white p-4 sm:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow cursor-pointer flex flex-col items-center justify-center"
+          class="bg-white p-4 sm:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow cursor-pointer"
         >
-          <div
-            class="w-full h-40 bg-cover bg-center mb-4 rounded-lg"
-            style="background-image: url('https://via.placeholder.com/300x200?text=Office+Cleaning')"
-          ></div>
-          <h3 class="text-lg sm:text-xl font-semibold mb-2">Commercial Cleaning</h3>
-          <p class="text-sm sm:text-base text-gray-600 text-center">
-            Professional cleaning services for a productive workspace.
-          </p>
+          <h3 class="text-lg sm:text-xl font-bold mb-4 text-gray-800">Office Cleaning</h3>
           <button
             class="mt-4 bg-blue-500 text-white px-4 sm:px-6 py-2 rounded-lg shadow hover:bg-blue-600 transition"
             @click="openDialog('officeCleans')"
@@ -58,16 +44,9 @@
 
         <!-- Custom Cleaning Section -->
         <div
-          class="bg-white p-4 sm:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow cursor-pointer flex flex-col items-center justify-center"
+          class="bg-white p-4 sm:p-6 rounded-xl shadow-md hover:shadow-lg transition-shadow cursor-pointer"
         >
-          <div
-            class="w-full h-40 bg-cover bg-center mb-4 rounded-lg"
-            style="background-image: url('https://via.placeholder.com/300x200?text=Custom+Cleaning')"
-          ></div>
-          <h3 class="text-lg sm:text-xl font-semibold mb-2">Custom Cleaning</h3>
-          <p class="text-sm sm:text-base text-gray-600 text-center">
-            Tailored cleaning services designed to meet your unique needs.
-          </p>
+          <h3 class="text-lg sm:text-xl font-bold mb-4 text-gray-800">Custom Cleaning</h3>
           <button
             class="mt-4 bg-blue-500 text-white px-4 sm:px-6 py-2 rounded-lg shadow hover:bg-blue-600 transition"
             @click="openDialog('customCleans')"
@@ -113,12 +92,22 @@ export default {
       homeCleans: [
         { name: 'General House Cleaning', route: '/general-house-cleaning' },
         { name: 'Spring Cleaning', route: '/spring-cleaning' },
+        { name: 'Move-In/Move-Out Cleaning', route: '/move-in-out-cleaning' },
+        { name: 'Deep Cleaning', route: '/deep-cleaning' },
+        { name: 'Post-Renovation Cleaning', route: '/post-renovation-cleaning' },
+        { name: 'Eco-Friendly Cleaning', route: '/eco-friendly-cleaning' },
       ],
       officeCleans: [
         { name: 'Standard Office Cleaning', route: '/standard-office-cleaning' },
+        { name: 'Deep Office Cleaning', route: '/deep-office-cleaning' },
+        { name: 'Conference Room Cleaning', route: '/conference-room-cleaning' },
+        { name: 'Restroom Sanitization', route: '/restroom-sanitization' },
+        { name: 'Lobby & Reception Cleaning', route: '/lobby-reception-cleaning' },
+        { name: 'After-Hours Office Cleaning', route: '/after-hours-office-cleaning' },
       ],
       customCleans: [
         { name: 'Specialized Cleaning', route: '/custom-clean' },
+        { name: 'Tailored Services', route: '/custom-clean' },
       ],
     };
   },
