@@ -78,30 +78,26 @@ export default {
     };
   },
   methods: {
-    submitForm() {
+    async submitForm() {
       this.isSubmitting = true;
-      fetch("https://example.com/contact", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(this.formData),
-      })
-        .then((response) => {
-          if (!response.ok) {
-            throw new Error("Failed to submit the form");
-          }
-          return response.json();
-        })
-        .then(() => {
-          alert("Thank you for reaching out! We'll get back to you shortly.");
-          this.formData = { name: "", email: "", message: "" };
-        })
-        .catch((error) => {
-          console.error("Error:", error);
-          alert("Something went wrong. Please try again later.");
-        })
-        .finally(() => {
-          this.isSubmitting = false;
+      try {
+        // Update the URL to match your Express server endpoint
+        const response = await fetch('http://localhost:3000/api/sendEmail', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(this.formData),
         });
+        if (!response.ok) {
+          throw new Error("Failed to send message");
+        }
+        alert("Thank you for reaching out! We'll get back to you shortly.");
+        this.formData = { name: "", email: "", message: "" };
+      } catch (error) {
+        console.error("Error:", error);
+        alert("Something went wrong. Please try again later.");
+      } finally {
+        this.isSubmitting = false;
+      }
     },
   },
 };

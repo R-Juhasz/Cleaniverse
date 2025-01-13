@@ -108,14 +108,34 @@ export default {
     };
   },
   methods: {
-    submitForm() {
-      if (
-        this.form.name &&
-        this.form.email &&
-        this.form.service &&
-        this.form.date
-      ) {
+    async submitForm() {
+      // We'll combine these fields into one "message" property
+      const consolidatedMessage = `
+        Service: ${this.form.service}
+        Preferred Date: ${this.form.date}
+        Comments: ${this.form.comments}
+      `;
+
+      // Build the payload for the API
+      const payload = {
+        name: this.form.name,
+        email: this.form.email,
+        message: consolidatedMessage,
+      };
+
+      try {
+        const response = await fetch('http://localhost:3000/api/sendEmail', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify(payload),
+        });
+
+        if (!response.ok) {
+          throw new Error('Failed to send booking request');
+        }
+
         alert(`Thank you, ${this.form.name}! Your booking has been submitted.`);
+        // Reset the form
         this.form = {
           name: "",
           email: "",
@@ -123,8 +143,9 @@ export default {
           date: "",
           comments: "",
         };
-      } else {
-        alert("Please fill out all required fields.");
+      } catch (error) {
+        console.error('Booking error:', error);
+        alert('Something went wrong. Please try again.');
       }
     },
   },

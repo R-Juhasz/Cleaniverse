@@ -2,7 +2,8 @@
   <div class="w-full h-screen flex flex-col items-center justify-center bg-gray-100 px-4">
     <h1 class="text-4xl font-bold text-gray-800 mb-4">Custom Clean</h1>
     <p class="max-w-3xl text-lg text-gray-600 text-center mb-6">
-      Tailored cleaning services to suit your unique needs. Leave a message with the details of your requirements, and we’ll get in touch to ensure your tailored clean is exactly what you want.
+      Tailored cleaning services to suit your unique needs. Leave a message with the details of your requirements,
+      and we’ll get in touch to ensure your tailored clean is exactly what you want.
     </p>
     <div class="max-w-lg bg-white shadow-lg rounded-lg p-6">
       <h2 class="text-2xl font-bold text-gray-800 mb-4">Contact Us</h2>
@@ -10,7 +11,8 @@
         Please fill out the form below or email us at
         <a href="mailto:cleaniverseLTD@gmail.com" class="text-blue-500 underline">
           cleaniverseLTD@gmail.com
-        </a>. Our team will reach out to discuss your tailored cleaning needs.
+        </a>.
+        Our team will reach out to discuss your tailored cleaning needs.
       </p>
       <form @submit.prevent="submitForm">
         <div class="mb-4">
@@ -70,7 +72,8 @@ export default {
   methods: {
     async submitForm() {
       try {
-        const response = await fetch('/api/sendEmail', {
+        // Update the URL to match your Express server endpoint
+        const response = await fetch('http://localhost:3000/api/sendEmail', {
           method: 'POST',
           headers: { 'Content-Type': 'application/json' },
           body: JSON.stringify(this.formData),
@@ -79,6 +82,7 @@ export default {
           throw new Error('Failed to send message');
         }
         alert('Your message has been sent successfully!');
+        // Reset form fields
         this.formData = { name: '', email: '', message: '' };
       } catch (error) {
         console.error('Error sending message:', error);
