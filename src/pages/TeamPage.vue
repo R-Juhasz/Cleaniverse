@@ -6,7 +6,7 @@
           <span class="hero-kicker">The team behind the clean</span>
           <h1>Less stock-template energy, more trust, care, and consistency.</h1>
           <p>
-            Instead of placeholder staff cards, this page now explains how the Cleaniverse team operates: what standards shape the work, how different crews support different spaces, and why that matters to clients.
+            Instead of placeholder staff cards, this page now explains how the Simply Clean team operates: what standards shape the work, how different crews support different spaces, and why that matters to clients.
           </p>
         </div>
 
@@ -56,7 +56,7 @@
             This new structure leaves room for that. For now, it gives the site a stronger and more credible team page without relying on fake imagery.
           </p>
           <div class="hero-actions mt-6">
-            <router-link to="/contact-us" class="button-primary">Contact Cleaniverse</router-link>
+            <router-link to="/contact-us" class="button-primary">Contact Simply Clean</router-link>
             <router-link to="/book-online" class="button-secondary">Book a visit</router-link>
           </div>
         </div>

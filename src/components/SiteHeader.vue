@@ -9,10 +9,10 @@
 
     <div class="nav-shell">
       <div class="container-shell nav-inner">
-        <router-link to="/" class="brand-link" aria-label="Cleaniverse home">
+        <router-link to="/" class="brand-link" aria-label="Simply Clean home">
           <span class="brand-orb"></span>
           <span class="brand-copy">
-            <strong>Cleaniverse</strong>
+            <strong>Simply Clean</strong>
             <small>Fresh spaces for homes and workplaces</small>
           </span>
         </router-link>

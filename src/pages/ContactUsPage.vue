@@ -3,7 +3,7 @@
     <section class="page-hero">
       <div class="container-shell split-panel">
         <div class="hero-copy animate-rise">
-          <span class="hero-kicker">Contact Cleaniverse</span>
+          <span class="hero-kicker">Contact Simply Clean</span>
           <h1>Use the right contact path for quotes, support, or custom cleaning requests.</h1>
           <p>
             The contact page now works like a proper service business contact hub instead of just a plain form. Visitors can message the team, jump to booking, or get payment help from here.
@@ -134,7 +134,7 @@ export default {
 
         this.status = {
           kind: 'success',
-          message: 'Your message has been sent. Cleaniverse can now pick this up and reply with the right next step.',
+          message: 'Your message has been sent. Simply Clean can now pick this up and reply with the right next step.',
         };
         this.form = {
           name: '',
@@ -146,7 +146,7 @@ export default {
         console.error('Contact form error:', error);
         this.status = {
           kind: 'error',
-          message: 'The message could not be sent right now. Please try again or email Cleaniverse directly.',
+          message: 'The message could not be sent right now. Please try again or email Simply Clean directly.',
         };
       } finally {
         this.isSubmitting = false;

@@ -5,7 +5,7 @@
         <div class="brand-link footer-brand-lockup">
           <span class="brand-orb"></span>
           <span class="brand-copy">
-            <strong>Cleaniverse</strong>
+            <strong>Simply Clean</strong>
             <small>Modern cleaning services with a polished, people-first feel.</small>
           </span>
         </div>
@@ -37,7 +37,7 @@
     </div>
 
     <div class="container-shell footer-bottom">
-      <p>(c) {{ year }} Cleaniverse. Designed for a cleaner, simpler booking journey.</p>
+      <p>(c) {{ year }} Simply Clean. Designed for a cleaner, simpler booking journey.</p>
       <router-link to="/faq">View common questions</router-link>
     </div>
   </footer>

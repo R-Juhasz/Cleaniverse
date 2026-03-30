@@ -409,7 +409,7 @@ export const faqItems = [
   {
     question: 'What types of cleaning do you offer?',
     answer:
-      'Cleaniverse supports homes, offices, move-in and move-out cleans, post-renovation work, eco-conscious visits, and custom-scoped jobs.',
+      'Simply Clean supports homes, offices, move-in and move-out cleans, post-renovation work, eco-conscious visits, and custom-scoped jobs.',
     category: 'Services',
   },
   {

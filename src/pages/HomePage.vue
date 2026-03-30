@@ -6,7 +6,7 @@
           <span class="hero-kicker">Modern cleaning company</span>
           <h1>Fresh spaces that feel instantly lighter.</h1>
           <p>
-            Cleaniverse delivers residential and commercial cleaning with a calmer, more polished experience from the first enquiry to the final walkthrough.
+            Simply Clean delivers residential and commercial cleaning with a calmer, more polished experience from the first enquiry to the final walkthrough.
           </p>
           <div class="hero-actions">
             <router-link to="/book-online" class="button-primary">Request a quote</router-link>
@@ -94,7 +94,7 @@
           </p>
           <div class="hero-actions">
             <router-link to="/faq" class="button-secondary">View all FAQs</router-link>
-            <router-link to="/contact-us" class="button-primary">Talk to Cleaniverse</router-link>
+            <router-link to="/contact-us" class="button-primary">Talk to Simply Clean</router-link>
           </div>
         </div>
 
@@ -107,7 +107,7 @@
         <div class="cta-banner animate-rise">
           <h2>Need a cleaner website and a cleaner booking journey to match?</h2>
           <p>
-            This refreshed version now positions Cleaniverse more like a modern service brand: sharper messaging, safer payment guidance, and a stronger path to enquiry.
+            This refreshed version now positions Simply Clean more like a modern service brand: sharper messaging, safer payment guidance, and a stronger path to enquiry.
           </p>
           <div class="hero-actions mt-6">
             <router-link to="/book-online" class="button-primary">Book online</router-link>

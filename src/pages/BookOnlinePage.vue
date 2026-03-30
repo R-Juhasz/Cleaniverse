@@ -197,7 +197,7 @@ export default {
 
         this.status = {
           kind: 'success',
-          message: 'Your booking request has been sent. Cleaniverse can now review the scope and confirm the next step by email.',
+          message: 'Your booking request has been sent. Simply Clean can now review the scope and confirm the next step by email.',
         };
         this.form = {
           name: '',
@@ -214,7 +214,7 @@ export default {
         console.error('Booking request error:', error);
         this.status = {
           kind: 'error',
-          message: 'The request could not be sent right now. Please try again or contact Cleaniverse by email.',
+          message: 'The request could not be sent right now. Please try again or contact Simply Clean by email.',
         };
       } finally {
         this.isSubmitting = false;

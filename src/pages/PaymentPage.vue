@@ -10,7 +10,7 @@
           </p>
           <ul class="check-list">
             <li>Use this page if you need a payment link, invoice reference, or receipt support.</li>
-            <li>Cleaniverse does not ask for raw card details through this form.</li>
+            <li>Simply Clean does not ask for raw card details through this form.</li>
             <li>If you have not booked yet, start with the booking page instead.</li>
           </ul>
           <div class="hero-actions">
@@ -24,7 +24,7 @@
           <ul class="check-list mt-6">
             <li>Send a booking request or speak to the team about the job.</li>
             <li>Receive the confirmed scope, price, and payment reference.</li>
-            <li>Pay through the secure method supplied by Cleaniverse.</li>
+            <li>Pay through the secure method supplied by Simply Clean.</li>
           </ul>
         </div>
       </div>
@@ -142,7 +142,7 @@ export default {
 
         this.status = {
           kind: 'success',
-          message: 'Your payment support request has been sent. Cleaniverse can now follow up with the right invoice or payment details.',
+          message: 'Your payment support request has been sent. Simply Clean can now follow up with the right invoice or payment details.',
         };
         this.form = {
           name: '',
@@ -155,7 +155,7 @@ export default {
         console.error('Payment support error:', error);
         this.status = {
           kind: 'error',
-          message: 'The request could not be sent right now. Please try again or email Cleaniverse directly.',
+          message: 'The request could not be sent right now. Please try again or email Simply Clean directly.',
         };
       } finally {
         this.isSubmitting = false;

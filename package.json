@@ -1,5 +1,5 @@
 {
-  "name": "cleaniverse",
+  "name": "simply-clean",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -50,7 +50,7 @@
     "not dead",
     "not ie 11"
   ],
-  "description": "Welcome to **Cleaniverse**, a responsive, single-scroll cleaning services website designed to deliver a modern, clean user experience. Built with Vue.js 3, this project showcases a professional layout with sections for services, payment, team members, and more.",
+  "description": "Welcome to **Simply Clean**, a responsive cleaning services website designed to deliver a modern, clean user experience. Built with Vue.js 3, this project showcases a professional layout with sections for services, payment, team, and booking.",
   "main": "babel.config.js",
   "repository": {
     "type": "git",

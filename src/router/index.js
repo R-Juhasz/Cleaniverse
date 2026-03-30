@@ -14,50 +14,50 @@ const routes = [
     path: '/',
     name: 'home',
     component: HomePage,
-    meta: { title: 'Cleaniverse | Modern Cleaning Services' },
+    meta: { title: 'Simply Clean | Modern Cleaning Services' },
   },
   {
     path: '/cleans',
     name: 'services',
     component: CleansPage,
-    meta: { title: 'Services | Cleaniverse' },
+    meta: { title: 'Services | Simply Clean' },
   },
   {
     path: '/book-online',
     name: 'book-online',
     component: BookOnlinePage,
-    meta: { title: 'Book Online | Cleaniverse' },
+    meta: { title: 'Book Online | Simply Clean' },
   },
   {
     path: '/contact-us',
     name: 'contact-us',
     component: ContactUsPage,
-    meta: { title: 'Contact Us | Cleaniverse' },
+    meta: { title: 'Contact Us | Simply Clean' },
   },
   {
     path: '/payment',
     name: 'payment',
     component: PaymentPage,
-    meta: { title: 'Payment Support | Cleaniverse' },
+    meta: { title: 'Payment Support | Simply Clean' },
   },
   {
     path: '/team',
     name: 'team',
     component: TeamPage,
-    meta: { title: 'Our Team | Cleaniverse' },
+    meta: { title: 'Our Team | Simply Clean' },
   },
   {
     path: '/faq',
     name: 'faq',
     component: FAQPage,
-    meta: { title: 'FAQ | Cleaniverse' },
+    meta: { title: 'FAQ | Simply Clean' },
   },
   ...allServices.map((service) => ({
     path: `/${service.slug}`,
     name: service.slug,
     component: ServiceDetailPage,
     props: { slug: service.slug },
-    meta: { title: `${service.title} | Cleaniverse` },
+    meta: { title: `${service.title} | Simply Clean` },
   })),
   {
     path: '/:pathMatch(.*)*',
@@ -74,7 +74,7 @@ const router = createRouter({
 });
 
 router.afterEach((to) => {
-  document.title = to.meta?.title || 'Cleaniverse | Modern Cleaning Services';
+  document.title = to.meta?.title || 'Simply Clean | Modern Cleaning Services';
 });
 
 export default router;
